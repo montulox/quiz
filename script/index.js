@@ -1,10 +1,14 @@
     let questionCounter = 1;
+    let percent = 0;
 function buttonsClick(button, type) {
     if (questionCounter == 6)
         return;
 
-    let currentAnswerBox = document.getElementById(`${questionCounter}`)
-    let nextAnswerBox = document.getElementById(`${questionCounter + 1}`)
+    let percentCounter = document.querySelector(".progress__percentage");
+    let percentBar = document.querySelector(".progress__bar");
+    let currentAnswerBox = document.getElementById(`${questionCounter}`);
+    let nextAnswerBox = document.getElementById(`${questionCounter + 1}`);
+
 
     if (type == "green"){
         button.style.backgroundColor = " #21978B";
@@ -20,6 +24,11 @@ function buttonsClick(button, type) {
     if(nextAnswerBox){
         nextAnswerBox.classList.add("quiz-page__questions--active");
     }
+questionCounter++;
 
-    questionCounter++;
+percent += 20; 
+percentCounter.innerHTML = `${percent + "%"}`
+
+percentBar.style = `background: linear-gradient(to right, #21978B 0%, #21978B ${percent}%, #e4e5e8 ${percent}%, #e4e5e8 100%);`
+
 }

@@ -81,7 +81,8 @@ body{
     width: 1000px;
     height: 18px;
     border-radius: 100px;
-    background-color: #e4e5e8;
+    background: linear-gradient(to right, #21978B 0%, #21978B 0%, #e4e5e8 0%, #e4e5e8 100%);
+    transition: background 0.5s ease;
 }
 .quiz-page__questions {
     text-align: center;
@@ -100,6 +101,7 @@ body{
 .questions__text {
     color: #323232;
     margin-bottom: 61px;
+    margin-top: 52px;
 }
 .questions__answers {
     display: flex;
