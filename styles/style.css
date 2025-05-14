@@ -6,7 +6,7 @@ body{
 
 .quiz-page {
     margin: 0px auto;
-    width: 1440px;
+    max-width: 1440px;
     background: linear-gradient(to bottom, #5C6D70 0px, #5C6D70 520px, #FFF 520px, #fff 100%);
     padding: 31px 100px;
     border: solid 3px black;
@@ -86,11 +86,16 @@ body{
 .quiz-page__questions {
     text-align: center;
     font-size: 30px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+.quiz-page__questions--active{
+    opacity: 1;
+    pointer-events: all;
 }
 .questions__borderline {
-    height: 1px;
+    height: 2px;
     background-color: #ddd;
-    margin-bottom: 52px;
 }
 .questions__text {
     color: #323232;
@@ -99,6 +104,8 @@ body{
 .questions__answers {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
     margin-bottom: 52px;
 }
 .questions__label {
@@ -115,12 +122,10 @@ body{
 .questions__option {
     border-radius: 100%;
 }
-.question__option--totaly-agree {
+.question__option--totally-agree {
     width: 82px;
     height: 82px;
     border: solid 6px #21978B;
-}
-.question__option--active {
 }
 .question__option--agree {
     width: 64px;
@@ -147,7 +152,7 @@ body{
     height: 64px;
     border: solid 6px #D43B3B;
 }
-.question__option--totaly-disagree {
+.question__option--totally-disagree {
     width: 82px;
     height: 82px;
     border: solid 6px #D43B3B;
