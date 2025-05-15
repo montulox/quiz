@@ -81,8 +81,20 @@ body{
     width: 1000px;
     height: 18px;
     border-radius: 100px;
-    background: linear-gradient(to right, #21978B 0%, #21978B 0%, #e4e5e8 0%, #e4e5e8 100%);
-    transition: background 0.5s ease;
+    background-color: #e4e5e8;
+}
+.progress__fill{
+    height: 100%;
+    width: 0%;
+    background-color: #21978B;
+    border-radius: 100px;
+    transition: width 0.5s ease;
+}
+.page-quiz__group {
+    display: none;
+}
+.page-quiz__group--active{
+    display: block;
 }
 .quiz-page__questions {
     text-align: center;
