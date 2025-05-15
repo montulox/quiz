@@ -11,7 +11,9 @@ function buttonsClick(button, type) {
 
     let questionId = `${questionCounter}`;
     let selectedValue = button.dataset.value;
-    userAnswers[questionId] = selectedValue;    
+    userAnswers[questionId] = selectedValue;   
+    console.log(userAnswers);
+    
 
     let percentCounter = document.querySelector(".progress__percentage");
     let percentBarFill = document.querySelector(".progress__fill");
