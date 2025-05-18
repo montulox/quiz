@@ -208,3 +208,14 @@ body{
 .quiz-page__footer {
     background-color: #292A28;
 }
+
+
+.quiz-page__chart-wrap{
+    max-width: 500px;
+    height: 600px;
+    margin: auto;
+    display: none;
+}
+.quiz-page__chart-wrap--active{
+    display: block;
+}
